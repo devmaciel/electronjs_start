@@ -1,0 +1,62 @@
+// ElectronJS - Desktop Apps
+// font:
+//  https://youtu.be/TnXz_nnQZrw 
+//  https://redstapler.co/simple-cpu-monitor-app-electron-tutorial-2020/
+
+Vamos utilizar o node/git
+e instalar este framework.
+
+    npm install electron -g
+    npm install create-electron-app -g
+
+Depois podemos utilizar o comando de create-app pra instalar a estrutura inicial
+
+    create-electron-app "NOME_DO_PROJETO_PASTA"
+
+Depois o de sempre.
+
+    npm run start
+
+-------------------------------------------------
+
+Na pasta SRC ta nosso javascript/html/css
+-------------------------------------------------------
+
+Esse app, constroe pra monitorar CPU Object, então na aula utiliza
+outro node module. opcional (os-util)
+
+    npm install os-utils
+
+--------------------------
+Pra fazer o build/installer
+
+    npm run make
+
+mas tem outro package que ele utiliza que é um package instaler mais detalhado
+
+    npm install electron-builder --dev
+
+temos que mudar nosso package json:
+
+  "scripts": {
+    "build-installer": "electron-builder"
+  },
+  "build" : {
+    "appId": "cool-app",
+    "win": {
+      "target": ["nsis"],
+      "icon": "src/favicon.ico",
+      "requestedExecutionLevel": "requireAdministrator"
+    },
+    "nsis": {
+      "installerIcon": "src/favicon.ico",
+      "uninstallerIcon": "src/favicon.ico",
+      "uninstallDisplayName": "CPU Monitor",
+      "license": "license.txt",
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
+  },
+
+  Depois só chamar o script pra instalar.
+  obs: "fav icon at least 256x256"

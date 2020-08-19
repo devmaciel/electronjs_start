@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Teste Electron</title>
+    <link rel="stylesheet" href="index.css">
+  </head>
+  <body>
+
+    <div class="box">
+      <span class="label">CPU (%)</span>
+      <span id="cpu">-</span>
+    </div>
+
+    <div class="box">
+      <span class="label">Free Mem (%)</span>
+      <span id="mem">-</span>
+    </div>
+
+    <div class="box">
+      <span class="label">Total Mem (GB)</span>
+      <span id="total-mem">-</span>
+    </div>
+
+
+    <!-- Content JS-->
+    <script>
+      const electron = require('electron');
+      const ipcRenderer = electron.ipcRenderer;
+
+      //cpu
+      ipcRenderer.on('cpu', (event,data) =>{
+        // console.log('cpu % ' + data );
+        document.getElementById('cpu').innerHTML = data.toFixed(2);
+      });
+
+      //mem
+      ipcRenderer.on('mem', (event,data) =>{
+        // console.log('mem % ' + data );
+        document.getElementById('mem').innerHTML = data.toFixed(2);
+      });
+      
+      //total-mem
+      ipcRenderer.on('total-mem', (event,data) =>{
+        // console.log('total mem (GB) % ' + data );
+        document.getElementById('total-mem').innerHTML = data.toFixed(2);
+      });
+
+    </script>
+
+
+  </body>
+</html>
