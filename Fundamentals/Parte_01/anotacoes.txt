@@ -1,0 +1,24 @@
+//=====================================
+// Electron js Tutorial - 1 - Introduction
+
+Introduction
+    Electron is an open source framework that is used to build cross platform
+    desktop applications using web technologies like html, css and javascript
+
+Why desktop apps?
+    web apps have drawbacks
+        -Writing conditional code because of browser differences
+        -Access to file system is also limited.
+        -Slow network connectivity
+
+Why web tech?
+    huge support community
+    cross platform
+
+How does electron work?
+    Chromium + NodeJS = Electron
+
+Pre requisites
+    HTML and CSS
+    Javascript 
+    NodeJs and npm

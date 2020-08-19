@@ -1,0 +1,15 @@
+//=====================================
+// Electron js Tutorial - 2 - Hello World
+
+Instalar o que precisamos.
+    NodeJS
+    ElectronJS
+
+    npm install electron --save-dev
+
+quando estiver tudo finalizado, start
+
+    npm start
+
+------------------------------------------
+

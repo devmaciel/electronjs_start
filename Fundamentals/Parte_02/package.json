@@ -1,0 +1,11 @@
+{
+    "name": "hello-word",
+    "version": "1.0.0",
+    "main": "index.js",
+    "devDependencies": {
+        "electron": "^9.2.1"
+    },
+    "scripts": {
+        "start": "electron ."
+    }
+}
