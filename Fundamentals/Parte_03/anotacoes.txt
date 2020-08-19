@@ -1,0 +1,7 @@
+//=====================================
+// Electron js Tutorial - 3 - Main and Renderer Process
+
+https://stackoverflow.com/questions/44391448/electron-require-is-not-defined
+
+------------------------------------------
+
