@@ -1,0 +1,17 @@
+//=====================================
+// Electron js Tutorial - 5 - Quote Widget
+
+aqui nessa aula ele utiliza uma API que está abandonada.
+https://quotesondesign.com/api/
+
+mas nao tem problema.
+
+vamos utlizar request.
+
+    npm install request --save
+
+no caso era pra api então né..
+
+
+------------------------------------------
+
