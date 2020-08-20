@@ -1,0 +1,22 @@
+//=====================================
+// Electron js Tutorial - 6 - IPC
+
+IPC
+--Main Process
+--Renderer Process
+--Renderer Process -> Native desktop API
+--Resources might be leaked
+--Inter process communication
+
+IPC flow
+--Renderer process has to display an error message
+
+              open-error-dialog
+  show dialog   <-----------
+[MAIN PROCESS]                [RENDERER]  
+                ----------->    log reply
+             opened-error-dialog               
+
+
+-----------------------------------
+não pode esquecer do npm install
