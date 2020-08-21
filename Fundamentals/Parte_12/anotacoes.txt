@@ -1,0 +1,12 @@
+//=====================================
+// Electron js Tutorial - 12 - CRUD File
+
+aqui ele utiliza um framework css pra Electron
+
+http://photonkit.com
+
+utiliza só o css minificado nessa aula
+
+------------------------------------------
+
+Pasta Files, que deixa organizado nossas files criadas com o CRUD.

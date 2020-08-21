@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD FILE</title>
+    <link rel="stylesheet" href="photon.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="mainWrapper">
+
+        <h1>CRUD FILE</h1>
+
+        <form>
+
+            <div class="form-group">
+                <label>File name</label>
+                <input id="fileName" type="text" class="form-control">
+            </div>
+            
+            <div class="form-group">
+                <label>Contents</label>
+                <textarea id="fileContents" class="form-control" rows="5"></textarea>
+            </div>
+
+        </form>
+
+        <button id="btnCreate" class="btn btn-default">Create</button>
+        <!-- Update is the same as creat, with the same name -->
+        <button id="btnRead" class="btn btn-default">Read</button>
+        <button id="btnDelete" class="btn btn-default">Delete</button>
+
+    </div>
+
+    <script src="./index.js"></script>
+    
+</body>
+</html>
