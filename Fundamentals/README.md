@@ -15,3 +15,5 @@ Cada pasta é uma aula:
 - 8 - Context Menu
 - 9 - Accelerators and Global Shortcuts
 - 10 - Shell Module
+- 11 - Tray Module
+- 12 - CRUD File
