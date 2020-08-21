@@ -1,0 +1,7 @@
+//=====================================
+// Electron js Tutorial - 11 - Tray Module
+
+Tray Icon é o que fica no submenu do sistema operacional
+
+------------------------------------------
+
