@@ -2,7 +2,7 @@
 
 //Requires
 const electron = require("electron");
-const { app, BrowserWindow } = require('electron');
+const { app, BrowserWindow, globalShortcut } = require('electron');
 const path = require('path');
 const url = require('url');
 const { create } = require("domain");
@@ -10,6 +10,8 @@ const { create } = require("domain");
 //Menu
 const Menu = electron.Menu;
 const MenuItem = electron.MenuItem;
+//GlobalShortcut
+// const GlobalShortcut = electron.GlobalShortcut;
 
 //Window 
 let win;
@@ -91,10 +93,16 @@ app.on('ready', function(){
         //second menu
         {
             label: 'Help',
-            click: function(){
-                //open external link on menu
-                electron.shell.openExternal('https://www.electronjs.org');
-            }
+            submenu: [
+                {
+                    label: 'About electron',
+                    click: function(){
+                        //open external link on menu
+                        electron.shell.openExternal('https://www.electronjs.org');
+                    },
+                    accelerator: 'CmdOrCtrl + Shift + H'
+                }
+            ]
         }
     ];
 
@@ -115,9 +123,18 @@ app.on('ready', function(){
         ctxMenu.popup(win, params.x, params.y);
     });
 
+    //globalshortcut, windows not focus
+    globalShortcut.register('Alt+1', () => {
+        win.show();
+    });
+
 
 });
 
+//GlobalShortcut Desative on Program Quit
+app.on('will-quit', () => {
+    globalShortcut.unregisterAll();
+})
 
 //Quit Program Window
 app.on('window-all-closed', () => {

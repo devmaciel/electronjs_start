@@ -1,4 +1,0 @@
-//=====================================
-// Electron js Tutorial - 7 - Application Menu
-
-Começamos com a estrutura inicial do hello-world

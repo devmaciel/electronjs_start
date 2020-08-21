@@ -1,0 +1,9 @@
+//=====================================
+// Electron js Tutorial - 7 - Application Menu,  Context Menu, 
+// Accelerators and Global Shortcuts
+
+Começamos com a estrutura inicial do hello-world
+
+GlobalShortcut é um shorcut com combinação de chaves do teclado
+que funciona mesmo até com janela não focada, porém além de rgistrar
+o globalshortcut, é preciso dar 'unregister' quando programa é fechado.
