@@ -3,18 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self'">
 
     <title>Olha o Minimapa</title>
-    
+
     <link rel="stylesheet" href="./photon.min.css">
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
 
-    <div class="mainWrapper">
+    <div class="container">
 
-        <h1>Claudinio</h1>
+        <h1>Olha o Minimapa</h1>
+<!-- 
+        <label for="interval_name">Intervalo de Repetição (segundos)</label>
+        <br/>
+        <input class="input_style" type="number" id="interval" name="interval_name" min="1" max="300" step="1" value="4" /> -->
+
+        <!-- <br/>
+        <br/> -->
+
+        <audio id="audioID" controls>
+            <source src="../audio/olhaomacaco.mp3" type="audio/mpeg">
+            Ops.. parece que seu browser não suporta audio :(
+        </audio>
 
     </div>
 

@@ -5,7 +5,6 @@ const app = electron.app;
 const BrowserWindow = electron.BrowserWindow;
 const path = require('path');
 const url = require('url');
-const { SIGABRT } = require("constants");
 
 const Menu = electron.Menu;
 
@@ -16,16 +15,16 @@ const iconPath = path.resolve('images/claudio.png');
 //Window, tray
 let win;
 let tray = null;
-let trayMenu; 
 
 //CREATE WINDOW FUNCTION
 function createWindow(){
     win = new BrowserWindow({
-        width: 800,
-        maxWidth: 800,
-        height: 600,
-        maxHeight:600,
+        width: 400,
+        maxWidth: 400,
+        height: 400,
+        maxHeight:400,
         maximizable: false,
+        resizable: false,
         icon: __dirname + '/favicon.ico',
         webPreferences: {nodeIntegration: true}
     });
@@ -37,7 +36,7 @@ function createWindow(){
     }));
 
     //DEV TOOLS (f12 chrome) Only for dev
-    win.webContents.openDevTools();
+    // win.webContents.openDevTools();
    
     win.on('closed', () => {
         win = null;
