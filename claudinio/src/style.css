@@ -1,0 +1,24 @@
+/* BOOT */
+html{
+    width: 100vw;
+    height: 100vh;
+
+}
+
+body {
+    /* RESET */
+    margin: auto;
+    max-width: 38rem;
+    padding: 3%;
+  
+    /* body-custom */
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;  
+}
